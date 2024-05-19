@@ -4,5 +4,5 @@
 + Split the dataset into 70% training data and 30% testing data. Implemented various models, namely Naive Bayes, Decision Trees, Random Forest, SVM, Logistic Regression, and Passive-Aggressive Classifier on the training data by applying count-vectorization and tf-idf techniques and calculated their accuracy using confusion matrices. SVM and Passive-Aggressive Classifier provided the highest accuracy (>90%) among them.
 
 # Prerequisites
-+ You can run the Notebook directly on Google Colab.
++ You can run the Notebook(fakeNews.ipynb) directly on Google Colab.
 + The dataset is already provided in the code (check for the file 'Fake_news.csv').
