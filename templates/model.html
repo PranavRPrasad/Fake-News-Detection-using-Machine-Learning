@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Model Page</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: floralwhite;
+            }
+            a {
+                padding:10px;
+                color:darkblue;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color: darksalmon;
+                color:maroon;
+                padding:10px;
+                opacity: inherit;
+                border:2px solid darkred;
+            }
+            .header {
+                padding:0.1%;
+                background-color: aqua;
+                border: 2px solid crimson;
+            }
+            .menu {
+                background-color:bisque;
+                margin:2% auto;
+                padding:1%;
+                border:2px solid brown;
+            }
+            hr {
+                background-color: crimson;
+                padding: 1px;
+            }
+            li {
+                color: darkred;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 style="margin-right: 5%; color:crimson; text-align: right;">FAKE NEWS DETECTION</h2>
+            </header>
+            <nav class="menu">
+               <a href="{{ url_for('home')}}">HOME</a>
+                <a href="{{ url_for('about')}}">ABOUT</a>
+                <a href="{{ url_for('model')}}">MODEL</a>
+                <a href="{{ url_for('test')}}">PREDICT</a>    
+            </nav>
+            <article style="width:auto; height:auto; background-color:aliceblue; border:2px solid darkblue">
+                <div>
+                    <hr><img src="{{url_for('static', filename='naive.jpeg')}}" alt="Naive Bayes" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Naive Bayes:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>In order to get a baseline accuracy rate for our data, we implemented a Naive Bayes classifier. Specifically, we used the scikit-learn implementation of Gaussian Naive Bayes.</li>
+                            <li>This is one of the simplest approaches to classification, in which a probabilistic approach is used, with the assumption that all features are conditionally independent given the class 
+                            label.</li>
+                            <li>We used the Doc2Vec embeddings. The Naive Bayes Rule is based on the Bayes’ 
+                            theorem:-  <b><i>P(c|x)=(P(x|c)*P(c))/P(x)</i></b></li>
+                        </p>    
+                    </ul>
+                </div>
+                <div>
+                    <hr><img src="{{url_for('static', filename='f.jpeg')}}" alt="Decision Trees" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Decision Trees:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>A decision tree may be a flowchart-like structure within which each internal node represents a test on an attribute each branch represents the end result of the test, and every leaf node represents a category label decision taken after computing all attributes.</li>
+                            <li>Decision trees are used for handling non-linear data sets effectively.</li>
+                            <li>Decision tree methodology is a commonly used data mining method for establishing classification systems based on multiple covariates or for developing prediction algorithms for a target variable.</li>
+                        </p>    
+                    </ul>
+                </div>
+                <div>
+                    <hr><img src="{{url_for('static', filename='a.jpeg')}}" alt="Random Forest" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Random Forest:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>Here, we have collection of choice trees.</li>
+                            <li>The random forest may be a classification algorithm which consists of the many sorts of decisions trees.</li>
+                            <li>It uses bagging and other feature randomness when building of every individual tree and try and create an uncorrelated forest of trees whose prediction made by committee is more accurate than that of the other individual tree.</li>
+                        </p>    
+                    </ul>
+                </div>
+                <div>
+                    <hr><img src="{{url_for('static', filename='c.jpg')}}" alt="Logistic Regression" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Logistic Regression:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>It is a kind of classification not a regression algorithm.</li>
+                            <li>In simple words, it can predict the probability of occurrence  of an occasion may be found by fitting data to the logit function.</li>
+                            <li>It can predict the probability,and its output values which lies in between 0 and 1.</li>
+                            <li>This has a fixed-size input x ∈ R^(1×300).</li><br>
+                        </p>    
+                    </ul>
+                </div>
+                <div>
+                    <hr><img src="{{url_for('static', filename='svm.jpeg')}}" alt="Support Vector Machine" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Support Vector Machine:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>The original Support Vector Machine (SVM) was proposed by Vladimir N. Vapnik and Alexey Ya. Chervonenkis in 1963.</li>
+                            <li>But that model can only do linear classification so it 
+                            doesn’t suit for most of the practical problems. Later in 1992, Bernhard E. Boser, Isabelle M. Guyon and Vladimir N. Vapnik introduced the kernel trick which enables the SVM for 
+                            non-linear classification.</li>
+                            <li>That makes the SVM much powerful. We use the Radial Basis 
+                            Function kernel in our project. The reason we use this kernel is that two Doc2Vec feature vectors will be close to each other if their corresponding documents are similar, so the distance computed by the kernel function should still represent the original distance.</li>
+                        </p>    
+                    </ul>
+                </div> 
+                <div>
+                    <hr><img src="{{url_for('static', filename='g.png')}}" alt="Passive Agressive Classifier" style="margin-left: 40%; border:2px solid darkblue;" width="350" height="350"><hr>
+                    <h3><u><i>Passive Agressive Classifier:</i></u></h3>
+                    <ul>
+                        <p>
+                            <li>It is ideal for classifying massive streams of data.</li>
+                            <li>It is very easy to implement and also, it is very fast. Such an algorithm remains passive for the correct classification of outcomes, and turns more aggressive in the event of  miscalculation, updating and makes adjustments.</li>
+                            <li>Unlike most other algorithms, it does not converge. Its purpose is to make updates that correct the loss, causing very little change in the norm of the weight vector.</li>
+                        </p>    
+                    </ul>
+                </div>                      
+            </article>
+            <footer style="background-color: blanchedalmond; color:brown; padding:1%; text-align: center; border:2px solid crimson; margin-top: 20px;">
+                &#124; &#124; COPYRIGHT &copy; &nbsp; 2021,&nbsp; INDIA ALL RIGHTS RESERVED &#124; &#124;
+            </footer>
+        </div>
+    </body>
+</html>

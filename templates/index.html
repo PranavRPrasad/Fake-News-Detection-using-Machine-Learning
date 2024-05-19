@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: floralwhite;
+            }
+            a {
+                padding:10px;
+                color:darkblue;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color: darksalmon;
+                color:maroon;
+                padding:10px;
+                opacity: inherit;
+                border:1px solid darkred;
+            }
+            .header {
+                padding:0.1%;
+                background-color: aqua;
+                border: 2px solid crimson;
+            }
+            .menu {
+                background-color:bisque;
+                margin:2% auto;
+                padding:1%;
+                border:2px solid brown;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 style="margin-right: 5%; color:crimson; text-align: right;">FAKE NEWS DETECTION</h2>
+            </header>
+            <nav class="menu">
+                 <a href="{{ url_for('home')}}">HOME</a>
+                <a href="{{ url_for('about')}}">ABOUT</a>
+                <a href="{{ url_for('model')}}">MODEL</a>
+                <a href="{{ url_for('test')}}">PREDICT</a>    
+            </nav>
+            <article style="width:auto; height:auto; background-color:aliceblue; border:2px solid darkblue; font-size:25px; font-family: cursive; ">
+                    <ul>
+                        <li>Newspapers are the primary source of news for people worldwide.</li>
+                        <li>However, off late, due to the significant growth and updates in technologies, there has been a stupendous rise in the popularity of social media.</li>
+                        <li>This can lead to easy manipulation of the existing news, thereby causing fake news.</li>
+                        <li>Fake news can be used as a vital tool to project people in a wrong way.</li>
+                        <li>It can spread hate among people which can further harm the society.</li>
+                        <li>Hence, it is very necessary to prevent the spread of fake news.</li>
+                        <li>In the modern era, the spread of fake news has become very evident.</li>
+                        <li>Fake news is being used for both economic and political benefits.</li>
+                        <li>The need of the hour is to prevent the spread of fake news.</li>
+                        <li>The first thing that needs to be done to achieve this is to detect fake news.</li>
+                        <li>Our project aims to develop a machine learning program to identify when a news source may be producing fake news.</li>
+                        <li>We use a corpus of labelled real and fake articles to build a classifier that can make decisions about information based on the content from the corpus.</li>
+                        <li>Our model focuses on identifying sources of fake news, based on multiple articles originating from a source.</li>
+                        <li>Once a source is labelled as a producer of fake news, we predict that all future articles from the same source are also a producer of fake news.</li>
+                    </ul>
+            </article>
+            <footer style="background-color: blanchedalmond; color:brown; padding:1%; text-align: center; border:2px solid crimson; margin-top: 20px;">
+                &#124; &#124; COPYRIGHT &copy; &nbsp; 2021,&nbsp; INDIA ALL RIGHTS RESERVED &#124; &#124;
+            </footer>
+        </div>
+    </body>
+</html>

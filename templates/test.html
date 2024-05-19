@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Prediction Page</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: floralwhite;
+            }
+            a {
+                padding:10px;
+                color:darkblue;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color: darksalmon;
+                color:maroon;
+                padding:10px;
+                opacity: inherit;
+                border:2px solid darkred;
+            }
+            .header {
+                padding:0.1%;
+                background-color: aqua;
+                border: 2px solid crimson;
+            }
+            .menu {
+                background-color:bisque;
+                margin:2% auto;
+                padding:1%;
+                border:2px solid brown;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 style="margin-right: 5%; color:crimson; text-align: right;">FAKE NEWS DETECTION</h2>
+            </header>
+            <nav class="menu">
+                <a href="{{ url_for('home')}}">HOME</a>
+                <a href="{{ url_for('about')}}">ABOUT</a>
+                <a href="{{ url_for('model')}}">MODEL</a>
+                <a href="{{ url_for('test')}}">PREDICT</a>        
+            </nav>
+            <article style="width:auto; height:auto; background-color:aliceblue; border:2px solid darkblue">
+                
+            </article>
+            
+        </div>
+
+<div class="login">
+	<h2>ENTER YOUR TEXT</h2>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<textarea  name="message" rows="6" cols="50" required="required" style="font-size: 18pt"></textarea>
+		<br> </br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        	<div class="results">
+
+	{% if prediction == ['FAKE']%}
+	<h2 style="color:red;">FAKE News</h2>
+	{% elif prediction == ['REAL']%}
+				<h2 style="color:green;"><b>TRUE News</b></h2>
+	{% endif %}
+
+	</div>
+
+    </form>
+<footer style="background-color: blanchedalmond; color:brown; padding:1%; text-align: center; border:2px solid crimson; margin-top: 20px;">
+                &#124; &#124; COPYRIGHT &copy; &nbsp; 2021,&nbsp; INDIA ALL RIGHTS RESERVED &#124; &#124;
+            </footer>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

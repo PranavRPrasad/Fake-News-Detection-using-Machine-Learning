@@ -1,0 +1,10 @@
+scikit-learn == 0.22.1
+pandas
+numpy
+flask
+matplotlib
+scipy
+jinja2
+gunicorn
+seaborn
+joblib

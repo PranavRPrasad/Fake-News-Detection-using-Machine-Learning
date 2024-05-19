@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>About Page</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: floralwhite;
+            }
+            a {
+                padding:10px;
+                color:darkblue;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color:darksalmon;
+                color:maroon;
+                padding:10px;
+                opacity: inherit;
+                border:2px solid darkred;
+            }
+            .header {
+                padding:0.1%;
+                background-color: aqua;
+                border: 2px solid crimson;
+            }
+            .menu {
+                background-color:bisque;
+                margin:2% auto;
+                padding:1%;
+                border:2px solid brown;
+            }
+            .about {
+                width: 250px;
+                height:400px;
+                padding:5px;
+                margin:5px 45px 5px 45px;
+                float:left;
+                text-align: center;
+                border:5px solid maroon;
+                font-size: 20px;
+                font-family:sans-serif;
+                border-radius: 10px;
+            }
+            h1 {
+                color:firebrick;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h2 style="margin-right: 5%; color:crimson; text-align: right;">FAKE NEWS DETECTION</h2>
+            </header>
+            <nav class="menu">
+                 <a href="{{ url_for('home')}}">HOME</a>
+                <a href="{{ url_for('about')}}">ABOUT</a>
+                <a href="{{ url_for('model')}}">MODEL</a>
+                <a href="{{ url_for('test')}}">PREDICT</a> 
+            </nav>
+            <article style="width:auto; height:75%; background-color:aliceblue; border:2px solid darkblue">
+                <center><h1><u>OUR TEAM</u></h1></center>
+                <div class="about">
+                    <img style="border: 2px solid crimson" src="{{url_for('static', filename='pavan.jpeg')}}" alt="Pavan M N" width="240" height="300"><br><br>
+                    <i><b>PAVAN M N</b></i><br><u>pavanmnn99@gmail.com</u>
+                </div>
+                <div class="about">
+                    <img style="border: 2px solid crimson" src="{{url_for('static', filename='pranav.jpeg')}}" alt="Pranav R Prasad" width="240" height="300"><br><br>
+                    <i><b>PRANAV R PRASAD</b></i><br><u>pranavrp.pr@gmail.com</u>
+                </div>
+                <div class="about">
+                    <img style="border: 2px solid crimson" src="{{url_for('static', filename='tejas.jpeg')}}" alt="Tejas Gowda" width="240" height="300"><br><br>
+                    <i><b>TEJAS GOWDA</b></i><br><u>tejasgowda811@gmail.com</u>
+                </div>
+                <div class="about">
+                    <img style="border: 2px solid crimson" src="{{url_for('static', filename='vibhakar.jpeg')}}" alt="Vibhakar T S" width="240" height="300"><br><br>
+                    <i><b>VIBHAKAR T S</b></i><br><u>vibuoo144@gmail.com</u>
+                </div>
+            </article>
+            
+        </div>
+<footer style="background-color: blanchedalmond; color:brown; padding:1%; text-align: center; border:2px solid crimson; margin-top: 20px;">
+                &#124; &#124; COPYRIGHT &copy; &nbsp; 2021,&nbsp; INDIA ALL RIGHTS RESERVED &#124; &#124;
+            </footer>
+    </body>
+</html>
